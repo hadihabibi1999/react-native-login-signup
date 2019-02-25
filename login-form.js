@@ -4,7 +4,7 @@ import React, { Component } from "react";
 export default class LoginForm extends Component {
 render() {
     return (
-        <KeyboardAvoidingView behavior='padding' style={{ flex: 1, flexDirection: "column", margin: 10 }}>
+        <View behavior='padding' style={{ flex: 1, flexDirection: "column", margin: 10 }}>
         <StatusBar
             barStyle="light-content"
         />
@@ -39,7 +39,7 @@ render() {
                     <Text style={{textAlign:'center',color:'#F5E9B0',fontSize:25}}>Log In</Text>
                 </TouchableOpacity>
             </View>
-        </KeyboardAvoidingView>
+        </View>
     );
   }
 }
