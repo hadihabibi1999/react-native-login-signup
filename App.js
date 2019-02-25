@@ -1,35 +1,31 @@
 import React from 'react';
-import { Button, View, Text } from 'react-native';
 import { createAppContainer, createStackNavigator } from 'react-navigation';
+import { Button, View, Text ,ImageBackground} from 'react-native';
+import Signup from './sign';
+import LoginForm from './login-form';
 
-class Login extends React.Component {
+ class Login extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Home Screen</Text>
-        <Button
-          title="Go to Details"
-          onPress={() => this.props.navigation.navigate('Signup')}
-        />
-      </View>
-    );
-  }
-}
+           <ImageBackground source={require('./back-image/fb9c093c0f56ddd40bac25aa7674c534.jpg')} style={{width: '100%', height: '100%'}}>  
 
-class Signup extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Details Screen</Text>
-        <Button
-          title="Go to Home"
-          onPress={() => this.props.navigation.navigate('Home')}
-        />
-        <Button
-          title="Go back"
-          onPress={() => this.props.navigation.goBack()}
-        />
-      </View>
+                <View style={{marginTop:280}}>
+                   <LoginForm/>
+                </View>
+
+                <View style={{marginTop:340}}>
+                    <Text style={{color:'gray'}}>Don't have an account? </Text>
+                </View>
+
+                <View>
+                      <Button
+                            title="Sign Up"
+                            type='clear'
+                            onPress={() => this.props.navigation.navigate('Signup')}
+                            />
+                 </View>
+
+           </ImageBackground>
     );
   }
 }
